@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct HelloClaudeApp: App {
+    init() {
+        NotificationManager.shared.requestAuthorizationIfNeeded()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
